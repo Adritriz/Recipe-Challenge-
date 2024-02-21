@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+/* || RESET */ 
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: var(--BORDER);
+    border-radius: var(--BORDER-RADIUS);
+}
+
+/* || VARIABLES */
+
+:root {
+    /* FONTS*/ 
+    --FF: "Outfit", sans-serif;
+    --FF-HEADERS: "Young Serif", serif;
+    --FS: 16px;
+
+    /* COLORS */
+    --BGCOLOR: hsl(30, 54%, 90%);
+    --BODY-BGCOLOR: hsl(0, 0%, 100%);
+    --FONT-COLOR: hsl(30, 10%, 34%);
+    --NUTMEG-COLOR:  hsl(14, 45%, 36%);
+    --DARK-RASPBERRY: hsl(332, 51%, 32%);
+    --ROSE-WHITE: hsl(330, 100%, 98%);
+    --DARK-CHARCOAL: hsl(24, 5%, 18%);
+    --LIGHT-GREY: hsl(30, 18%, 87%);
+
+    /* MARGIN */ 
+    --MARGIN: 5em 0;
+    --SECTION-MARGIN: 0 2em;
+
+    /* STANDARD PADDING */
+    --PADDING: 1.25em 0;
+    --RW-PADDING: 1.5em 2em;
+    --HERO-PADDING: 2em 2em;
+    --TABLE-PADDING: .5em 2em;
+
+    /* BORDERS */ 
+    --BORDER: 1px solid var(--BODY-BGCOLOR);
+    --BORDER-RADIUS: 15px;
+    --BORDER-BOTTOM: 1px solid var(--LIGHT-GREY);
+
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--BGCOLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: var(--FF-HEADERS);
+    font-weight: lighter;
+    margin: .5em 0;
+}
+
+h1 {
+    color: var(--DARK-CHARCOAL);
+}
+
+h2 {
+    color: var(--NUTMEG-COLOR);
+}
+
+h3 {
+    color: var(--DARK-RASPBERRY);
+    padding-bottom: .5em;
+}
+
+
+/*|| LISTS */
+li {
+    padding: 0 1.25em .5em 1.25em;
+}
+
+ul,
+ol {
+    margin-left: 1.5em;
+}
+
+.square {
+    list-style-type: square;
+}
+
+ul li::marker,
+ol li::marker {
+    color: var(--NUTMEG-COLOR);
+    font-weight: bold;
+}
+
+
+/* || CONTAINERS */
+
+.container {
+    border: var(--BORDER);
+    border-radius: var(--BORDER-RADIUS);
+    width: 800px;
+    margin: var(--MARGIN);
+}
+
+.hero {
+   padding: var(--HERO-PADDING);
+}
+
+.section {
+    padding: var(--PADDING);
+    margin: var(--SECTION-MARGIN);
+}
+
+.section:not(:has(table)) {
+    border-bottom: var(--BORDER-BOTTOM);
+}
+
+.rose-white {
+    background-color: var(--ROSE-WHITE);
+    border: var(--BORDER);
+    border-radius: var(--BORDER-RADIUS);
+    padding: var(--RW-PADDING);
+    margin: var(--SECTION-MARGIN);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* || TABLE */ 
+
+.table table {
+    border-collapse: collapse;
+}
+
+.table tr >* {
+    text-align: left;
+  /*   border: 1px solid red; */
+    padding: var(--TABLE-PADDING);
+}
+
+.table tr:not(:last-child) >* {
+    border-bottom: var(--BORDER-BOTTOM);
+}
+ 
+.table tr:first-child >* {
+   padding-top: 1.75em;
+}
+
+.table tr:last-child >* {
+   padding-bottom: 1.75em;
+}
+
+.table th {
+    padding-right: 13em;
+    font-weight: 400;
+}
+ 
+.table td {
+    color: var(--NUTMEG-COLOR);
+    width: 100%; 
+}
+
+
+
+
