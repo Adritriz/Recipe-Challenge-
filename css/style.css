@@ -77,6 +77,11 @@ body {
     line-height: 1.5;
 }
 
+footer {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
 h1,
 h2 {
     font-family: var(--FF-HEADERS);
